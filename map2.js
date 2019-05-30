@@ -30,4 +30,18 @@ var phoneBook = [
 // Take the phonebook above and use map to return a new phonebook that includes a country-code that matches the rest of the phone number.
 // For example, the 0th element of the new array should be {Abe: "1-111-111-1111"}
 
+// need a var mapBook
+// using the phoneBook array and then .map - loop is set up
+
+// charAt - opposite of indexOf.
+var phone = phoneBook.map( function (obj) {
+  var result = {}
+  result[Object.keys(obj)[0]];
+  //object.keys makes the names(key) into an array
+  //object.values makes the phone numbers (values) into an array
+  result[Object.keys(obj)[0]] = Object.values(obj)[0].charAt(0) + "-" + Object.values(obj);
+  return result;
+})
+
+console.log(phone);
 //Your code here
